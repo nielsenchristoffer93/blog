@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+    <section>
+        <div class="blog-post">
+            <form action="/save/<%= post.uuid %>?_method=PUT" method="post">
+            <h1>
+                <input type="text" id="title" name="title" value="<%= post.title %>" required>
+            </h1>
+            <div class="blog-post__info">
+                <h2>
+                    <input type="text" id="date" name="date" value="<%= post.date %>" required>
+                </h2>
+                <div class="blog-post__info-author">
+                    <h2>Author:</h2>
+                    <h2>
+                        <input type="text" id="author" name="author" value="<%= post.author %>" required>
+                    </h2>
+                </div>
+            </div>
+            <hr>
+            <p>
+                <textarea id="content" name="content" rows="10" required><%= post.content %></textarea>
+            </p>
+            <!-- Submit button -->
+            <input type="submit" value="Save">
+            </form>
+        </div>
+    </section>
+    <%- include("partials/footer.ejs") %>

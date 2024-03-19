@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+<section>
+    <div class="blog-post">
+        <h1><%= post.title %></h1>
+        <div class="blog-post__info">
+            <h2><%= post.date %></h2>
+            <div class="blog-post__info-author">
+                <h2>Author:</h2>
+                <h2><%= post.author %></h2>
+            </div>
+        </div>
+        <hr>
+        <p><%= post.content %></p>
+        <a href="/update/<%= post.uuid %>" class="button edit">Edit blog post</a>
+        <a href="/delete/<%= post.uuid %>" class="button delete">Delete blog post</a>
+    </div>
+</section>
+<%- include("partials/footer.ejs") %>

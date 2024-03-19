@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+    <section>
+        <div class="grid-container">
+            <div class="grid-container__left">
+                <div class="blog-posts">
+                    <% posts.forEach(post=> { %>
+                        <div class="post">
+                            <p>
+                                <%= post.date %>
+                            </p>
+                            <p>
+                                <%= post.title %>
+                            </p>
+                            <div class="flex_right">
+                                <a class="post__link" href="/blog-post/<%= post.uuid %>">Read more</a>
+                                <a href="/update/<%= post.uuid %>" class="post__link edit"><i class='bx bx-edit'></i></a>
+                                <a href="/delete/<%= post.uuid %>" class="post__link delete"><i class='bx bx-trash'></i></a>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+            <div class="grid-container__right">
+                <%- include("partials/blog-form.ejs") %>
+            </div>
+        </div>
+    </section>
+    <%- include("partials/footer.ejs") %>
