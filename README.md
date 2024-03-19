@@ -2,6 +2,8 @@
 
 ⭐ Create / update / delete blog posts.
 
+⭐ Data stored in JSON file.
+
 ⭐ Darkmode support. 
 
 Homepage ⬇️
